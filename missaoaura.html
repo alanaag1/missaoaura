@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+  <form action="javascript:void(0);">
+  <div id="perguntas" class="formulario">
+  <label id="para_data">Quando você nasceu?</label>
+      <input type="date" id="data" name="data" value="" placeholder="">
+      <label id="para_nome">Qual o seu nome?</label>
+     <input type="text" id="nome" name="nome" value="">
+     <!--/div>
+    <div class="perguntas"-->
+    <label>Você prefere:</label>
+    <select name="perguntas" id="pergunta1">
+  <option value="1">Construir</option>
+  <option value="2">Investigar</option>
+  <option value="3">Explorar</option>
+  <option value="4">Planejar</option>
+</select>
+    <label>No que você é melhor?</label>
+    <select name="pergunta2" id="pergunta2">
+  <option value="1">Corrigir falhas</option>
+  <option value="2">Analisar evidências</option>
+  <option value="3">Lidar com situações novas</option>
+  <option value="4">Coordenar pessoas</option>
+</select>
+    <label>Você é bom em:</label>
+    <select name="pergunta3" id="pergunta3">
+  <option value="1">Encontrar soluções práticas</option>
+  <option value="2">Descobrir como as coisas funcionam</option>
+  <option value="3">Experimentar alternativas</option>
+  <option value="4">Decidir os próximos passos</option>
+</select>
+   <label>Você gostaria de trabalhar na:</label>
+    <select name="pergunta4" id="pergunta4">
+  <option value="1">Área da engenharia</option>
+  <option value="2">Área da ciência</option>
+  <option value="3">Área da exploração</option>
+  <option value="4">Área estrategista</option>
+</select>
+<button type="button" id="login" onclick="getAnswers()">
+    ENVIAR
+</button>   
+    </div>
+  </form>
+      <section id="sessao-resultado">
+    <h1>Resultado do seu Perfil</h1>
+
+    <p>
+        Olá, <span id="nome_resultado"></span>!<br>
+        Sua idade é <span id="idade_resultado"></span>.
+    </p>
+
+    <div id="resultado"></div>
+
+    <div id="cards_resultado"></div>
+
+    <button type="button" onclick="reiniciarPagina()" id="reiniciar">
+        REFAZER TESTE
+    </button>
+</section>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
